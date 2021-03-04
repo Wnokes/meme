@@ -1,9 +1,17 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import HeaderLogo from '../components/images/HeaderLogo';
+import Container from "../components/layouts/Container";
 
-export default () => {
+interface ISearchScreenProps {
+  navigation: {
+    navigate: (arg: string) => void;
+  };
+}
+
+export default (props: ISearchScreenProps) => {
   return (
-  <View>
+  <Container navigate={props.navigation.navigate} >
     <Text> Search Screen</Text>
-  </View>);
+  </Container>);
 };
